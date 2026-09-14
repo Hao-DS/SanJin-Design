@@ -1,5 +1,5 @@
 {
-  "$schema": "design-expert-evidence/v1",
+  "$schema": "sanjin-design-expert-evidence/v1",
   "project": "prototype-name",
   "stack": {
     "name": "semi",

@@ -1,5 +1,5 @@
 ---
-name: design-expert-vchart
+name: sanjin-design-expert-vchart
 description: SanJin-设计专家内置的 VChart 图表工作流。页面出现 KPI 趋势、对比、构成、BI 主图或 AI 结果图表时启用；负责图表选型、证据、接入、交互与验收，其它 UI 保持用户选定的 Semi / Ant Design / TDesign。
 ---
 

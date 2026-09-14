@@ -20,4 +20,4 @@ AI 对话 / Agent UI 取证顺序：
 2. 项目安装的 VChart 版本与已有封装
 3. 官网 [visactor.io/vchart](https://www.visactor.io/vchart/)
 
-分享时复制完整 `design-expert/` 目录即可；写组件代码前按 `mcp-setup/` 配置所需 MCP。
+分享时复制完整 `sanjin-design-expert/` 目录即可；写组件代码前按 `mcp-setup/` 配置所需 MCP。

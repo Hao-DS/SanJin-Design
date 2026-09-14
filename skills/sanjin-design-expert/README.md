@@ -1,11 +1,11 @@
 # SanJin-设计专家
 
-B 端数据中台 / BI / AI 数据助理设计技能（技术标识：`design-expert`）。默认交付可运行、可交互的高保真原型；设计规范和评审报告仅在用户明确要求时产出。本目录是可独立分享的极简技能包，不依赖仓库内其它 Skill。
+B 端数据中台 / BI / AI 数据助理设计技能（技术标识：`sanjin-design-expert`）。默认交付可运行、可交互的高保真原型；设计规范和评审报告仅在用户明确要求时产出。本目录是可独立分享的极简技能包，不依赖仓库内其它 Skill。
 
 ## 目录结构
 
 ```text
-design-expert/
+sanjin-design-expert/
 ├── SKILL.md                 # 技能入口（必读）
 ├── README.md                # 本说明
 ├── references/              # 设计规范、Token、模板、验收
@@ -30,9 +30,9 @@ design-expert/
 
 ## 安装（分享给同事）
 
-1. 将整个 `design-expert` 文件夹复制到目标项目的：
-   - `.agents/skills/design-expert/`，或
-   - `.cursor/skills/design-expert/`
+1. 将整个 `sanjin-design-expert` 文件夹复制到目标项目的：
+   - `.agents/skills/sanjin-design-expert/`，或
+   - `.cursor/skills/sanjin-design-expert/`
 2. **配置组件库 MCP（写代码强烈推荐）**：让 Agent 按 `companions/mcp-setup/` 写入项目 `.cursor/mcp.json`，或手动复制 `companions/mcp-setup/mcp.json.example`。最少装 **Semi MCP**；步骤见 `companions/mcp-setup/INSTALL.md`。
 3. **默认实现栈为 Semi Design**：直接通过 Semi MCP 取得组件文档和示例证据。
 4. **AI 产品（可选增强）**：伴生 `companions/ant-design-x/` 已内置。需要官方完整技能包时可安装 [`@ant-design/x-skill`](https://x.ant.design/x-skills/introduce-cn/)（`npm i -g @ant-design/x-skill && npx x-skill`）。
@@ -62,7 +62,7 @@ design-expert/
 
 - **产品默认视觉**：只用 `references/DESIGN.md`，不要直接套用合集里的 Linear/Stripe 等营销皮肤。
 - **默认产物**：页面、后台、BI、AI 助理与截图还原请求，默认直接实现可交互原型；只有明确提出“规范、方案、报告、评审”时才输出对应文本。
-- **按需路由**：同一阶段使用 `design-expert` + 至多 2 个必要伴生；AI、图表和基础实现分阶段加载。
+- **按需路由**：同一阶段使用 `sanjin-design-expert` + 至多 2 个必要伴生；AI、图表和基础实现分阶段加载。
 - **改进证据**：现有界面改进必须同时证明设计契约、实际运行路径和唯一修正；没有充分证据时不凑问题。
 - **规范沉淀**：DESIGN.md 只记录可追溯的治理性决策，不把重复值、局部样式或案例皮肤提升为规范。
 - **实现库**：进入可运行页面 / 工程前先询问用户技术栈；用户不选择则默认 Semi Design。支持 Semi / Ant Design / TDesign；AI 区按需使用 Ant Design X。

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static, dependency-free checks for design-expert prototype deliverables."""
+"""Static, dependency-free checks for sanjin-design-expert prototype deliverables."""
 
 from __future__ import annotations
 
@@ -44,7 +44,7 @@ def source_files(project: Path) -> list[Path]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate a design-expert prototype.")
+    parser = argparse.ArgumentParser(description="Validate a sanjin-design-expert prototype.")
     parser.add_argument("--project", required=True, help="Prototype project directory")
     parser.add_argument("--stack", required=True, choices=STACK_RULES, help="Selected UI stack")
     parser.add_argument("--evidence", help="Path to evidence.json; defaults to <project>/evidence.json")

@@ -18,7 +18,7 @@
 
 同一阶段优先使用 1 个主技能，最多再加载 2 个伴生技能。不要同时加载超过 3 个技能。
 
-- **主技能**：`design-expert`。
+- **主技能**：`sanjin-design-expert`。
 - **实现栈证据（选 1）**：Semi MCP、Ant Design MCP、TDesign MCP。
 - **横切伴生（按需选）**：Ant Design X、VChart。
 

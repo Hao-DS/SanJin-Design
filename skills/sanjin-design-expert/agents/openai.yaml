@@ -1,4 +1,4 @@
 interface:
   display_name: "SanJin-设计专家"
   short_description: "生成数据中台、BI 与 AI 助理的可运行高保真原型"
-  default_prompt: "使用 $design-expert 为我的 B 端产品设计并实现一个可交互的高保真原型。"
+  default_prompt: "使用 $sanjin-design-expert 为我的 B 端产品设计并实现一个可交互的高保真原型。"
