@@ -1,11 +1,11 @@
-# 设计专家
+# SanJin-设计专家
 
 B 端数据中台 / BI / AI 数据助理设计技能（技术标识：`design-expert`）。默认交付可运行、可交互的高保真原型；设计规范和评审报告仅在用户明确要求时产出。本目录是可独立分享的极简技能包，不依赖仓库内其它 Skill。
 
 ## 目录结构
 
 ```text
-设计专家/
+design-expert/
 ├── SKILL.md                 # 技能入口（必读）
 ├── README.md                # 本说明
 ├── references/              # 设计规范、Token、模板、验收
@@ -30,9 +30,9 @@ B 端数据中台 / BI / AI 数据助理设计技能（技术标识：`design-ex
 
 ## 安装（分享给同事）
 
-1. 将整个 `设计专家` 文件夹复制到目标项目的：
-   - `.agents/skills/设计专家/`，或
-   - `.cursor/skills/设计专家/`
+1. 将整个 `design-expert` 文件夹复制到目标项目的：
+   - `.agents/skills/design-expert/`，或
+   - `.cursor/skills/design-expert/`
 2. **配置组件库 MCP（写代码强烈推荐）**：让 Agent 按 `companions/mcp-setup/` 写入项目 `.cursor/mcp.json`，或手动复制 `companions/mcp-setup/mcp.json.example`。最少装 **Semi MCP**；步骤见 `companions/mcp-setup/INSTALL.md`。
 3. **默认实现栈为 Semi Design**：直接通过 Semi MCP 取得组件文档和示例证据。
 4. **AI 产品（可选增强）**：伴生 `companions/ant-design-x/` 已内置。需要官方完整技能包时可安装 [`@ant-design/x-skill`](https://x.ant.design/x-skills/introduce-cn/)（`npm i -g @ant-design/x-skill && npx x-skill`）。

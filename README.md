@@ -12,7 +12,7 @@
 
 ## 已收录 Skills
 
-### [设计专家](skills/design-expert/README.md)
+### [SanJin-设计专家](skills/design-expert/README.md)
 
 面向 B 端数据中台、BI、运营后台与 AI 数据助理的设计技能。提供从需求理解、组件选型、设计证据到可运行高保真原型和视觉验收的完整工作流，并支持 Semi Design、Ant Design、TDesign、Ant Design X 与 VChart。
 

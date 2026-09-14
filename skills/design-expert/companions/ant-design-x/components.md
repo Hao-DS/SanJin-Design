@@ -1,6 +1,6 @@
 # Ant Design X 组件场景映射
 
-按需选用。抽象模式对齐「设计专家」AI 规则；组件名来自 [@ant-design/x](https://x.ant.design/) / [技能列表](https://x.ant.design/x-skills/skills-cn/)。  
+按需选用。抽象模式对齐「SanJin-设计专家」AI 规则；组件名来自 [@ant-design/x](https://x.ant.design/) / [技能列表](https://x.ant.design/x-skills/skills-cn/)。
 实现前以官网 API 为准。
 
 ## 对话壳与布局

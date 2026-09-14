@@ -1,11 +1,11 @@
 ---
 name: mcp-setup
-description: 帮助用户在 Cursor 中安装并配置「设计专家」所需的组件库 MCP（Semi、Ant Design、TDesign）。当用户提到安装 MCP、配置 mcp.json、MCP 不可用、或首次使用设计专家写组件代码时使用。
+description: 帮助用户在 Cursor 中安装并配置「SanJin-设计专家」所需的组件库 MCP（Semi、Ant Design、TDesign）。当用户提到安装 MCP、配置 mcp.json、MCP 不可用、或首次使用 SanJin-设计专家写组件代码时使用。
 ---
 
 # 组件库 MCP 安装助手
 
-本伴生帮助用户把「设计专家」依赖的组件库 MCP 配进 Cursor，从而能按官方文档取证写代码。
+本伴生帮助用户把「SanJin-设计专家」依赖的组件库 MCP 配进 Cursor，从而能按官方文档取证写代码。
 
 官方 / 包来源均为各组件库官方或常用官方通道（见下方链接）。内网环境请确认可访问 npm 官方源或公司已同步的镜像。
 

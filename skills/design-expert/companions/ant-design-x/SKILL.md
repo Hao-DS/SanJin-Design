@@ -8,8 +8,8 @@ description: Ant Design X（@ant-design/x）AI 产品组件与技能指南。设
 专为 **AI 对话 / Agent / 数据助理** 界面提供组件选型与实现指引。  
 官方介绍：[Ant Design X Skills](https://x.ant.design/x-skills/introduce-cn/) · 技能列表：[skills-cn](https://x.ant.design/x-skills/skills-cn/)
 
-> **调用关系**：由「设计专家」在 AI 产品场景下按需读取。  
-> 视觉气质仍以「设计专家」`references/DESIGN.md` 为准；本伴生只负责 **AI 交互层组件与 SDK**，不得用紫粉霓虹 AI 装饰风覆盖企业数据台规范。
+> **调用关系**：由「SanJin-设计专家」在 AI 产品场景下按需读取。
+> 视觉气质仍以「SanJin-设计专家」`references/DESIGN.md` 为准；本伴生只负责 **AI 交互层组件与 SDK**，不得用紫粉霓虹 AI 装饰风覆盖企业数据台规范。
 
 ## 何时启用（硬规则）
 
@@ -67,10 +67,10 @@ npx x-skill
 ## 快速工作流
 
 1. 确认是 AI 产品界面（见「何时启用」）。
-2. 读「设计专家」`references/ai-trust-and-states.md`（信任 / 确认 / 失败态硬规则）。
+2. 读「SanJin-设计专家」`references/ai-trust-and-states.md`（信任 / 确认 / 失败态硬规则）。
 3. 读本文件 + `components.md`，选定组件组合。
 4. 若写代码：先查官网或已安装的 `x-components` / `use-x-chat` 再实现。
-5. 对照「设计专家」`visual-quality.md` 做视觉验收（flat、单一 primary、无紫粉 AI 装饰）。
+5. 对照「SanJin-设计专家」`visual-quality.md` 做视觉验收（flat、单一 primary、无紫粉 AI 装饰）。
 
 ## 交付声明
 

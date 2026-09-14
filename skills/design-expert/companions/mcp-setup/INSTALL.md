@@ -1,6 +1,6 @@
 # 组件库 MCP 安装指南（Cursor）
 
-面向分享「设计专家」技能后的同事：不装 MCP 仍可做设计方案；**写可运行组件代码时建议至少安装 Semi MCP**。
+面向分享「SanJin-设计专家」技能后的同事：不装 MCP 仍可做设计方案；**写可运行组件代码时建议至少安装 Semi MCP**。
 
 前置：已安装 [Node.js](https://nodejs.org/) 18+，终端可执行 `node -v` / `npx -v`。
 
@@ -81,7 +81,7 @@ npx x-skill
 
 文档：https://x.ant.design/x-skills/introduce-cn/
 
-「设计专家」内已有伴生：`companions/ant-design-x/`。
+「SanJin-设计专家」内已有伴生：`companions/ant-design-x/`。
 
 ## 6. 验证是否成功
 
@@ -105,4 +105,4 @@ npx x-skill
 
 ## 9. 请 Agent 代劳时可以说
 
-> 用「设计专家」帮我安装 Semi / Ant Design / TDesign 的 MCP，写入项目 `.cursor/mcp.json`，不要删掉我已有的其它 MCP。
+> 用「SanJin-设计专家」帮我安装 Semi / Ant Design / TDesign 的 MCP，写入项目 `.cursor/mcp.json`，不要删掉我已有的其它 MCP。

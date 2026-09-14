@@ -1,9 +1,9 @@
 ---
 name: design-expert
-description: 设计专家。为数据中台、BI、运营后台和 AI 数据助理产出可运行、可交互的 B 端高保真原型。默认使用 Semi Design，也支持经 MCP 取证的 Ant Design / TDesign；AI 对话按需使用内置 Ant Design X 伴生，图表统一使用内置 VChart 工作流。包含按需路由、设计证据门禁、DESIGN.md 证据化沉淀与原型校验。
+description: SanJin-设计专家。为数据中台、BI、运营后台和 AI 数据助理产出可运行、可交互的 B 端高保真原型。默认使用 Semi Design，也支持经 MCP 取证的 Ant Design / TDesign；AI 对话按需使用内置 Ant Design X 伴生，图表统一使用内置 VChart 工作流。包含按需路由、设计证据门禁、DESIGN.md 证据化沉淀与原型校验。
 ---
 
-# 设计专家
+# SanJin-设计专家
 
 面向产品经理、UX/UI 设计师。**第一目标是产出可运行、可交互的高保真原型页面。**
 

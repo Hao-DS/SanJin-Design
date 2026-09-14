@@ -1,11 +1,11 @@
 ---
 name: design-expert-vchart
-description: 设计专家内置的 VChart 图表工作流。页面出现 KPI 趋势、对比、构成、BI 主图或 AI 结果图表时启用；负责图表选型、证据、接入、交互与验收，其它 UI 保持用户选定的 Semi / Ant Design / TDesign。
+description: SanJin-设计专家内置的 VChart 图表工作流。页面出现 KPI 趋势、对比、构成、BI 主图或 AI 结果图表时启用；负责图表选型、证据、接入、交互与验收，其它 UI 保持用户选定的 Semi / Ant Design / TDesign。
 ---
 
-# VChart 伴生技能（设计专家）
+# VChart 伴生技能（SanJin-设计专家）
 
-> 由「设计专家」在需要渲染真实数据图表时读取。视觉气质仍以 `references/DESIGN.md` 为准；本文件只负责图表渲染层，不依赖其它本地 Skill。
+> 由「SanJin-设计专家」在需要渲染真实数据图表时读取。视觉气质仍以 `references/DESIGN.md` 为准；本文件只负责图表渲染层，不依赖其它本地 Skill。
 
 ## 何时启用（硬规则）
 
