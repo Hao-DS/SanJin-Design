@@ -1,0 +1,5 @@
+interface:
+  display_name: "SanJin-维斯.安德森美学"
+  short_description: "生成高饱和马卡龙撞色、对称秩序与克制叙事并置的电影感视觉"
+  brand_color: "#E77F9B"
+  default_prompt: "使用 $sanjin-wes-anderson-aesthetic 将我的主题设计成高饱和马卡龙撞色的原创对称电影感画面。"
