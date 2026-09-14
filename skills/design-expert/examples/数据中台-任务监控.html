@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据任务监控 · 结构示例</title>
+    <style>
+      :root {
+        color: #1c1f23;
+        background: #f5f6f7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      button, input, select { font: inherit; }
+      button:focus-visible, input:focus-visible, select:focus-visible {
+        outline: 2px solid #1664ff;
+        outline-offset: 2px;
+      }
+      .shell { min-height: 100dvh; display: grid; grid-template-columns: 208px 1fr; }
+      .nav {
+        padding: 20px 12px;
+        color: #d9e2f2;
+        background: #182230;
+      }
+      .brand { padding: 0 12px 20px; color: #fff; font-size: 16px; font-weight: 600; }
+      .nav a {
+        display: block;
+        margin: 4px 0;
+        padding: 9px 12px;
+        color: inherit;
+        border-radius: 6px;
+        text-decoration: none;
+      }
+      .nav a[aria-current="page"] { color: #fff; background: #2b3a4f; }
+      main { min-width: 0; padding: 24px; }
+      .page-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 20px;
+      }
+      h1 { margin: 0 0 6px; font-size: 24px; line-height: 32px; }
+      .meta, .muted { color: #667085; font-size: 13px; }
+      .surface {
+        background: #fff;
+        border: 1px solid #e4e7ec;
+        border-radius: 8px;
+      }
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        gap: 12px;
+        padding: 16px;
+      }
+      label { display: grid; gap: 6px; color: #475467; font-size: 13px; }
+      input, select {
+        min-width: 156px;
+        height: 32px;
+        padding: 0 10px;
+        border: 1px solid #cfd4dc;
+        border-radius: 6px;
+        background: #fff;
+      }
+      .actions { display: flex; gap: 8px; margin-left: auto; }
+      button {
+        height: 32px;
+        padding: 0 14px;
+        border: 1px solid #cfd4dc;
+        border-radius: 6px;
+        background: #fff;
+        cursor: pointer;
+      }
+      button.primary { color: #fff; border-color: #1664ff; background: #1664ff; }
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin: 16px 0;
+      }
+      .kpi { padding: 16px 20px; }
+      .kpi strong { display: block; margin: 8px 0 4px; font-size: 28px; line-height: 34px; }
+      .status { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
+      .dot { width: 8px; height: 8px; border-radius: 50%; background: #f04438; }
+      .table-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        border-bottom: 1px solid #e4e7ec;
+      }
+      h2 { margin: 0; font-size: 16px; }
+      table { width: 100%; border-collapse: collapse; font-size: 14px; }
+      th, td { padding: 12px 20px; border-bottom: 1px solid #eef0f3; text-align: left; }
+      th { color: #475467; background: #fafafa; font-weight: 500; }
+      .tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 12px; }
+      .tag.ok { color: #067647; background: #ecfdf3; }
+      .tag.error { color: #b42318; background: #fef3f2; }
+      .link { color: #175cd3; text-decoration: none; }
+      .footer { display: flex; justify-content: flex-end; padding: 12px 20px; }
+      @media (max-width: 900px) {
+        .shell { grid-template-columns: 1fr; }
+        .nav { display: none; }
+        main { padding: 16px; }
+        .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .table-wrap { overflow-x: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <nav class="nav" aria-label="主导航">
+        <div class="brand">数据治理中心</div>
+        <a href="#">概览</a>
+        <a href="#" aria-current="page">任务监控</a>
+        <a href="#">质量管理</a>
+        <a href="#">权限申请</a>
+      </nav>
+      <main>
+        <header class="page-head">
+          <div>
+            <h1>数据任务监控</h1>
+            <div class="meta">统计范围：全部生产任务 · 数据更新于 14:20</div>
+          </div>
+          <button>导出当前结果</button>
+        </header>
+
+        <form class="surface filters">
+          <label>任务名称<input placeholder="输入任务名称" /></label>
+          <label>任务状态
+            <select><option>全部状态</option><option>运行中</option><option>失败</option></select>
+          </label>
+          <label>负责人<input placeholder="输入负责人" /></label>
+          <div class="actions"><button type="reset">重置</button><button class="primary">查询</button></div>
+        </form>
+
+        <section class="kpis" aria-label="关键指标">
+          <article class="surface kpi"><span class="muted">今日任务</span><strong>1,284</strong><span class="muted">较昨日 +3.2%</span></article>
+          <article class="surface kpi"><span class="muted">运行中</span><strong>86</strong><span class="muted">平均耗时 18 分钟</span></article>
+          <article class="surface kpi"><span class="muted">成功率</span><strong>98.6%</strong><span class="muted">近 7 日稳定</span></article>
+          <article class="surface kpi"><span class="muted">失败任务</span><strong>18</strong><span class="status"><i class="dot"></i>其中 6 个待处理</span></article>
+        </section>
+
+        <section class="surface">
+          <div class="table-head"><div><h2>任务明细</h2><span class="muted">共 1,284 条</span></div><button>刷新</button></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>任务名称</th><th>数据域</th><th>负责人</th><th>状态</th><th>最近运行</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr><td>订单宽表日更新</td><td>交易</td><td>林晓</td><td><span class="tag ok">成功</span></td><td>14:18</td><td><a class="link" href="#">查看详情</a></td></tr>
+                <tr><td>会员标签聚合</td><td>用户</td><td>周宁</td><td><span class="tag error">失败</span></td><td>14:06</td><td><a class="link" href="#">排查原因</a></td></tr>
+                <tr><td>门店库存同步</td><td>供应链</td><td>陈雨</td><td><span class="tag ok">成功</span></td><td>13:52</td><td><a class="link" href="#">查看详情</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="footer"><span class="muted">第 1 页 / 共 43 页</span></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
