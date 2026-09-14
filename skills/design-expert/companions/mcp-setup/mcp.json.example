@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "semi-mcp": {
+      "command": "npx",
+      "args": ["-y", "@douyinfe/semi-mcp"]
+    },
+    "antd": {
+      "command": "npx",
+      "args": ["-y", "@ant-design/cli", "mcp"]
+    },
+    "tdesign-mcp-server": {
+      "command": "npx",
+      "args": ["-y", "tdesign-mcp-server@latest"]
+    }
+  }
+}
