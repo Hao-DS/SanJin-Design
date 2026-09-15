@@ -59,15 +59,15 @@
 
 | Pink Y2K 商业街 | Ice Blue 街机店 |
 | --- | --- |
-| ![Pink Y2K commercial street](assets/examples/01-pink-commercial-street.jpg) | ![Ice blue arcade](assets/examples/02-ice-blue-arcade.jpg) |
+| ![Pink Y2K commercial street](https://raw.githubusercontent.com/Hao-DS/SanJin-Design/9c6411b843ee505bb52c82e6ee742065881a33c1/skills/sanjin-y2k-millennium-babe/assets/examples/01-pink-commercial-street.jpg) | ![Ice blue arcade](https://raw.githubusercontent.com/Hao-DS/SanJin-Design/9c6411b843ee505bb52c82e6ee742065881a33c1/skills/sanjin-y2k-millennium-babe/assets/examples/02-ice-blue-arcade.jpg) |
 
 | 水洗牛仔涂鸦巷 | 紫粉天鹅绒便利店 |
 | --- | --- |
-| ![Denim graffiti alley](assets/examples/03-denim-graffiti-alley.jpg) | ![Lavender convenience store](assets/examples/04-lavender-convenience-store.jpg) |
+| ![Denim graffiti alley](https://raw.githubusercontent.com/Hao-DS/SanJin-Design/9c6411b843ee505bb52c82e6ee742065881a33c1/skills/sanjin-y2k-millennium-babe/assets/examples/03-denim-graffiti-alley.jpg) | ![Lavender convenience store](https://raw.githubusercontent.com/Hao-DS/SanJin-Design/9c6411b843ee505bb52c82e6ee742065881a33c1/skills/sanjin-y2k-millennium-babe/assets/examples/04-lavender-convenience-store.jpg) |
 
 | 黑粉夜间停车场 | 亮橙酸绿商业街 |
 | --- | --- |
-| ![Black pink parking lot](assets/examples/05-black-pink-parking-lot.jpg) | ![Orange lime commercial street](assets/examples/06-orange-lime-commercial-street.jpg) |
+| ![Black pink parking lot](https://raw.githubusercontent.com/Hao-DS/SanJin-Design/9c6411b843ee505bb52c82e6ee742065881a33c1/skills/sanjin-y2k-millennium-babe/assets/examples/05-black-pink-parking-lot.jpg) | ![Orange lime commercial street](https://raw.githubusercontent.com/Hao-DS/SanJin-Design/9c6411b843ee505bb52c82e6ee742065881a33c1/skills/sanjin-y2k-millennium-babe/assets/examples/06-orange-lime-commercial-street.jpg) |
 
 ## 文件结构
 
@@ -76,7 +76,6 @@ SKILL.md                              # 主流程、任务路由、提示词组�
 README.md                             # 中英文说明、安装方式、使用示例与示例图
 agents/openai.yaml                    # Codex 界面元数据与调用策略
 references/style-bible.md             # 人脸、服装、材质、配色、妆发、场景和摄影规则
-assets/examples/                      # 六张压缩后的 9:16 示例图
 ```
 
 ## 设计依据
