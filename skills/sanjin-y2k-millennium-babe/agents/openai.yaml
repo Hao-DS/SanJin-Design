@@ -1,0 +1,8 @@
+interface:
+  display_name: "SanJin-Y2K千禧辣妹"
+  short_description: "生成具有千禧甜酷、性感与复古未来感的女性穿搭视觉提示词"
+  brand_color: "#FF4FB7"
+  default_prompt: "使用 $sanjin-y2k-millennium-babe 将我的成年女性角色需求转化为 Y2K 千禧辣妹风格的生图提示词。"
+
+policy:
+  allow_implicit_invocation: true
