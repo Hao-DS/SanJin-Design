@@ -1,0 +1,5 @@
+interface:
+  display_name: "SanJin-粉蓝梦核插画"
+  short_description: "生成空气喷绘质感、全局粉蓝综合色与珍珠虹彩的梦核插画"
+  brand_color: "#89DDEC"
+  default_prompt: "使用 $sanjin-pink-blue-dreamcore-illustration 并附加最相关的内置参考图，将我的主题转化为非摄影的粉蓝空气喷绘梦核插画。"
