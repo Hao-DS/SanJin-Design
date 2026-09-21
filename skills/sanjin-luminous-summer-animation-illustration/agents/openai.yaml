@@ -1,0 +1,5 @@
+interface:
+  display_name: "SanJin-晴夏手绘动画插画"
+  short_description: "生成青蓝晴空、黄绿植被与暖阳青影的手绘夏日动画插画"
+  brand_color: "#55C7D9"
+  default_prompt: "使用 $sanjin-luminous-summer-animation-illustration 并附加最相关的内置参考图，把我的主题转化为通透明亮、带水粉笔触和夏日空气感的原创手绘动画插画。"

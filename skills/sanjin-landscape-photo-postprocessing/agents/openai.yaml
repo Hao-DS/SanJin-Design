@@ -1,0 +1,6 @@
+interface:
+  display_name: "SanJin-风光摄影后期"
+  short_description: "基于《风光摄影后期基础》的诊断、调色与保真修图方法"
+  default_prompt: "使用 $sanjin-landscape-photo-postprocessing 分析这张风光照片并制定或执行后期修图方案。"
+policy:
+  allow_implicit_invocation: true

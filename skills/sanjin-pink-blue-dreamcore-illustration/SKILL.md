@@ -1,11 +1,11 @@
 ---
 name: sanjin-pink-blue-dreamcore-illustration
-description: Create or transform still images and image prompts into original powder-blue dreamcore digital illustrations with airbrushed pastel rendering, cyan-pink-lilac color flooding, pearlescent translucency, softened everyday scenes, restrained sparkles, and gentle surreal details. Use for “粉蓝梦核”, “虹彩治愈插画”, “全息泡泡感”, pastel suburban reveries, or luminous dreamlike portraits and objects; do not use for photography, architectural visualization, neon cyberpunk, dark surrealism, or requests to replicate a supplied image.
+description: Create or transform still images and prompts into original powder-blue dreamcore illustrations rooted in familiar liminal spaces, memory ambiguity, gentle everyday logic displacement, airbrushed pastel rendering, cyan-pink-lilac color flooding, pearlescent translucency, and distinctive couture-inspired character styling. Use for “粉蓝梦核”, “虹彩治愈插画”, soft liminal campuses, pastel suburban reveries, luminous dreamlike portraits, fashion characters, or objects; do not use for photography, architectural visualization, neon cyberpunk, horror weirdcore, or requests to replicate supplied imagery or branded runway looks.
 ---
 
 # SanJin-粉蓝梦核插画
 
-将人物、日常场景、静物或建筑，转译为原创的粉蓝梦核数字插画：普通世界被空气喷绘般的粉蓝、粉紫、蜜桃与薄荷光整体重新着色，材质边缘呈现轻微虹彩分色，真实细节被柔化为半透明记忆。成品必须一眼读作“插画”，不能像建筑摄影、生活方式照片或写实渲染后叠加滤镜。该系统只提取可复用视觉语法，不复制参考图里的具体人物、房屋、街道、物品、构图、文字或元素组合。
+将人物、日常场景、静物或建筑转译为原创粉蓝梦核数字插画：熟悉日常处于“经过而非抵达”的阈限状态，有局部记忆模糊与一次温和的逻辑错位；用空气喷绘般的粉蓝、粉紫、蜜桃与薄荷光重新着色。成品必须一眼读作“梦核插画”，而非粉彩滤镜照片、建筑可视化或写实渲染。只提取可复用视觉语法，绝不复制参考图的具体内容或组合。
 
 ## 先判断输入角色
 
@@ -30,39 +30,45 @@ description: Create or transform still images and image prompts into original po
 
 ## 默认输出契约
 
-- 无编辑目标时默认 **2:3 竖幅**：它适合人像、单件静物与居住建筑，也保留大面积清澈天空或室内留白。横向叙事可用 3:2 或 4:3，双主体/静物可用 1:1；用户指定优先。
+- 无编辑目标时默认 **2:3 竖幅**；横向叙事用 3:2 或 4:3，双主体/静物用 1:1；用户指定优先。
 - 最终图长边至少 1536 px，除非平台能力或用户规格限制。
 - 默认无可读文字、无 logo、无水印；需要长文字时预留干净后期排版区，不依赖一次生成保证拼写。
-- 画面保持原创日常叙事：一个明确主体、一个日常情境，以及 0–2 个互相服务的轻微梦境现象，例如虹彩气泡、闪尘、透光蒸汽或柔光水面。
-- 粉蓝、粉紫、蜜桃、奶油黄与薄荷色必须参与天空、墙面、肤色、植物、路面和阴影的整体插画化着色；不能只在水坑、玻璃或高光上出现一点彩虹。
-- 若生成结果仍像照片、建筑可视化或商业空间效果图，即使构图和主题正确，也视为未通过，不得直接交付。
+- 画面有一个情绪焦点、1–3 个生活残留、至多一个主错位和一个弱辅助现象；错位限于光学、空间、尺度、时间或语义。
+- 选强粉蓝、记忆粉蓝或阈限粉蓝；粉蓝、粉紫、蜜桃、奶油黄与薄荷色须覆盖多个区域，不能只作局部特效。
+- 移除粉蓝、泡泡、虹彩后仍须看得出阈限空间、记忆模糊、日常错位或情绪残留之一；照片感、建筑可视化感或商业空间效果图均不通过。
 - 默认输出 RGB JPG；用户要求透明、无损或后期编辑时用 PNG。
 
 ## 强制参考锚点
 
-- 生成或转译本风格时，默认从 assets/style-references/ 选择 **2–3 张**与题材最接近的参考图，并作为风格参考实际传给图像生成工具；不可只把风格改写成文字后省略图片。
-- 参考图必须明确标注为“风格参考”，不能作为编辑目标；它们只约束媒介、色彩覆盖、光线、边缘和空气感。
-- 建筑/街景优先选 02、06、08；人物/动物优先选 01、07；静物/饮品优先选 03、04；窗边植物优先选 05。具体搭配遵循 [reference-index.md](references/reference-index.md)。
+- 生成或转译本风格时，按题材从 `assets/style-references/` 选择 **1 张**最接近的参考图，并作为风格参考实际传给图像生成工具；不可只把风格改写成文字后省略图片。
+- 参考图必须明确标注为“风格参考”，不能作为编辑目标；它只约束媒介、综合色、光线、边缘和空气感，不复制具体内容。
+- 建筑/街景优先选 02、06 或 08 中最贴近场景的一张；通用人物/动物选 01 或 07；成年女性角色选 09；静物/饮品选 03 或 04；窗边植物选 05。仅在无法判断时按需阅读 [reference-index.md](references/reference-index.md)。
 - 若当前图像工具无法接收这些参考图，应先向用户说明这一限制；不要在缺少视觉锚点时假装能够稳定复现该风格。
 
 ## 制作流程
 
-1. **确定梦境情感。** 先阅读 [narrative-system.md](references/narrative-system.md)。从晨间苏醒、日常被轻轻照亮、私密成长、温柔独处、熟悉之地的异化、短暂停驻中选一个；不把“治愈”写成空泛的可爱或广告式快乐。
-2. **提炼一句可见场景。** 写成“谁/什么在何处经历怎样的普通片刻，光或一处轻微异常如何让它像刚从梦里醒来”。保持一个视觉中心，异常现象不超过两个。
-3. **选择画幅与空间。** 阅读 [visual-system.md](references/visual-system.md)，让比例服务主体和留白，再从肖像漂浮、留白街景、晨光建筑、折光静物、窗边生命体或日常小剧场中选一种主配方；复杂构图再读 [scene-recipes.md](references/scene-recipes.md)。不要用镜头焦段、景深、真实曝光或建筑摄影等措辞组织画面。
+按需读取：只在当前请求确实需要该细则时才打开对应说明文件。不要在每次任务开始时通读全部 `references/`；能凭本文件完成时不额外读取。读取顺序优先遵循以下步骤中的触发条件。
+
+1. **确定梦境情感。** 从晨间苏醒、日常被轻轻照亮、私密成长、温柔独处、熟悉之地的异化、短暂停驻、温柔疏离中选一个；不把“治愈”写成空泛的可爱或广告式快乐。仅当情感、叙事或错位方式难以确定时，阅读 [narrative-system.md](references/narrative-system.md)。
+2. **提炼一句可见场景与梦核机制。** 人物主导时写成“谁/什么在何处经历怎样的普通片刻，一处错位如何让它像刚从梦里醒来”；环境主导时写成“哪个熟悉的过渡空间暂时失去用途，哪些生活残留与轻微不合理使它像一段记不完整的梦”。选择光学、空间、尺度、时间或语义错位中的一种作为主机制，必要时只加一个弱辅助现象。
+3. **选择画幅与空间。** 让比例服务主体、通道或留白，再从肖像漂浮、留白街景、晨光建筑、折光静物、窗边生命体、日常小剧场、校园阈限空间或熟悉之地错位中选一种主配方；复杂构图才阅读 [scene-recipes.md](references/scene-recipes.md)。仅当色彩覆盖、画面密度或空间配方无法判断时，阅读 [visual-system.md](references/visual-system.md)。不要用镜头焦段、景深、真实曝光或建筑摄影等措辞组织画面。
 4. **锁定插画媒介。** 先写明“fully rendered soft-airbrushed pastel digital illustration”，再描述题材。要求轮廓轻微融色、局部细节被绘制化简化、亮部有粉黄溢光、冷边有青紫分色；重复声明不是照片、不是建筑可视化、不是写实 3D。
-5. **锁定全局粉蓝着色。** 让粉蓝/粉紫色域覆盖画面约 75–90%，并进入墙面、路面、植物、衣物、肤色和阴影。自然绿色、棕色、灰色与黑色必须被压低并偏移到柔和青绿、桃粉或蓝紫。**Soft does not mean washed out. Preserve a clean cyan field, readable pastel-pink light, pearly spectral highlights, and luminous warm skin; avoid gray haze, dirty whites, naturalistic photographic color, and a single flat color wash.**
-6. **建立主体与日常锚点。** 人物、动物、器物或房屋必须有清晰剪影和一个平静可读的状态。用眼镜、衬衣、玻璃杯、植物、屋檐、书本、器皿等 1–3 个细节说明地点与身份；只保留识别所需的结构，避免写实砖纹、树叶、皮肤毛孔或室内陈设把画面推回照片。
-7. **编译提示词。** 阅读 [prompt-compiler.md](references/prompt-compiler.md)。写清情感、可见场景、画幅、图形关系、负空间、空气喷绘媒介、全局粉蓝着色、虹彩边缘、日常锚点、微小异常、柔光、插画表面、强制反摄影声明和排除项。
-8. **选择并附加视觉参考。** 阅读 [reference-index.md](references/reference-index.md)，按题材从 assets/style-references/ 选 2–3 张作为实际图像输入。它们只约束抽象风格，不授权复制内容；提示词必须同时写明来源残留禁区。
+5. **选择综合色强度。** 人物、虹彩静物默认强粉蓝 75–90%；怀旧日常默认记忆粉蓝 55–75%；走廊、楼梯、候车区等环境型场景默认阈限粉蓝 40–65%。综合色必须进入多个物体与阴影，而非局部特效。**Soft does not mean washed out. Preserve a clean cyan field, readable pastel-pink light, pearly spectral highlights, and luminous warm skin; avoid gray haze, dirty whites, naturalistic photographic color, and a single flat color wash.**
+6. **建立情绪焦点、生活残留与人物层级。** 焦点可以是人物、物件，也可以是一扇门、一个转角或一段没有抵达点的通道。用书本、未收起的椅子、半开的门、停止摆动的窗帘、水迹、杯子或植物等 1–3 个细节留下生活痕迹；只保留识别所需结构。人物占比超过 30% 时，阅读 [character-fashion-system.md](references/character-fashion-system.md) 并使用完整高定系统；占比 15–30% 时只使用一个廓形特征、一个结构细节和一个妆发/配饰识别点；低于 15% 时服装服从环境，不强制高定。女性角色参考 09 只提供成年比例、丰盈发量、暖透肤色与虹彩边缘等高层特征，不复刻其具体身份、视线、姿势、泡泡排列或服装。
+7. **编译提示词。** 写清情感、可见场景、主梦核机制、画幅、情绪焦点、负空间、空气喷绘媒介、综合色档位、生活残留、主错位与弱辅助现象、柔光、插画表面、人物造型层级、强制反摄影声明和排除项。仅当任务是“提示词设计”、输出较复杂，或出现格式遗漏时，阅读 [prompt-compiler.md](references/prompt-compiler.md)。
+8. **选择并附加视觉参考。** 按题材选择 1 张风格参考作为实际图像输入；仅在候选图难以区分时阅读 [reference-index.md](references/reference-index.md)。它只约束抽象风格，不授权复制内容；提示词必须写明来源残留禁区。
 9. **生成或编辑。** 使用可用的图像生成能力。编辑时附上实际目标图，并与风格参考清楚区分。若首次结果像照片或建筑渲染，首要修订必须是“convert the entire frame into a soft-airbrushed pastel digital illustration; remove photographic texture and naturalistic color”，再降低真实纹理、压浅黑位并扩大粉蓝/粉紫覆盖；不要只增加泡泡、闪光或局部虹彩。
-10. **全画幅验收。** 依照 [quality-gate.md](references/quality-gate.md) 先做“媒介身份门禁”，再检查光色、留白、虹彩材质、主体可读性、异常克制、文字污染及来源残留。未通过即定向修订。
+10. **全画幅验收与确认。** 先按本文件检查梦核身份、插画媒介、单张参考的抽象使用、光色、留白、记忆模糊、错位强度、人物层级、文字污染及来源残留；边界案例或正式验收才阅读 [quality-gate.md](references/quality-gate.md)。若未通过，说明具体问题和建议的定向修订，**先征得用户确认，再进行任何修订**；不要自动重试或自动生成新版本。
 11. **整理交付。** 如需统一格式，用 scripts/export_still.py 转换并检查尺寸/比例。交付时简述参考图、情感、空间配方、色板、比例及保留要素。
 
 ## 关键禁区
 
-拒绝或修订以下结果：复刻参考图中的泡泡卷发眼镜人物、菠萝水果静物、校园咖啡杯、窗前树、鹿形人物、具体民居或街道；写实摄影、建筑摄影、房地产效果图、生活方式广告、商业咖啡店宣传照、写实 3D 或“真实照片加粉蓝滤镜”；画面仍由米白、柏油灰、自然绿、木棕和黑色主导，仅在水坑或玻璃上放一点彩虹；用单一粉蓝蒙版覆盖一切，却没有全局有色阴影、边缘分色、空气渐变和插画化简化；把“梦核”做成恐怖空房、故障文字、诡异人偶、黑暗迷宫或不安监控感；过强赛博霓虹、深黑背景、紫蓝高反差、激光、故障像素或未来都市；厚重油画笔触、硬边矢量、二次元卡通、塑料玩具 3D、游戏渲染、商业棚拍、过度锐化、HDR；大面积炫彩油膜或镭射金属取代柔和的玻璃/珍珠折射；过曝到主体丢失、灰雾、脏白、荧光肤色或肤色发灰；多个无关奇观、密集闪粉、漂浮文字、logo、水印、错误文字和随意品牌。
+- 不复制参考图的角色身份、姿势、道具组合、具体建筑/街道、文字或品牌；不照搬奢侈品牌、秀场造型、商标和标志性图案。
+- 不以泡泡、闪粉或局部虹彩替代阈限空间、记忆模糊和逻辑错位；不叠加多个无关的空间、尺度或时间异常；明亮过渡空间不得变成恐怖怪核。
+- 不做写实摄影、建筑/地产效果图、生活方式广告、写实 3D 或“照片加粉蓝滤镜”。避免赛博霓虹、深黑、激光、故障像素、厚油画、硬边矢量、二次元、玩具 3D、游戏渲染、棚拍、HDR。
+- 人物服装须有清晰廓形与结构；不让背景人物抢焦点，不以饰品冒充高定，也不堆叠装饰至轮廓消失。
+- 禁止灰雾、脏白、荧光或发灰肤色、主体过曝、单色蒙版、密集闪粉、漂浮/错误文字、logo 和水印。
 
 ## 最少交付说明
 
-在最终输出旁说明：输入角色、实际采用的 2–3 张风格参考、梦境情感、空间配方、主色板、画幅及其理由、尺寸、编辑时保留的要素，以及是否包含需要后期核对的文字。
+交付时简述：输入角色、采用的单张风格参考、情感、空间配方、错位、综合色档位、画幅/尺寸及编辑保留项。若质量门禁未通过，只列问题和建议修订，等待用户确认。

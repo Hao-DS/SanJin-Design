@@ -1,0 +1,5 @@
+interface:
+  display_name: "SanJin-幻想概念插画"
+  short_description: "生成蓝青洋红撞色、粗笔触与平面色块化的表现主义幻想插画"
+  brand_color: "#168CFF"
+  default_prompt: "使用 $sanjin-fantasy-concept-illustration 将我的主题制作成蓝青洋红撞色、粗笔触、色块化且半抽象的表现主义幻想插画。"

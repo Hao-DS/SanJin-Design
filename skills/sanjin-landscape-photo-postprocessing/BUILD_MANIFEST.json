@@ -1,0 +1,41 @@
+{
+  "tool": "cangjie-tools v2.5.0",
+  "published_hashes": {
+    "SKILL.md": "68196ef58960950332bba40a80bd32aaac50ecb6ebd2b76aad28bd0f0b2936b1",
+    "references/capabilities/authenticity-boundary.md": "d7a958771ebab8e7c4b50d7f0236712a5544e7c9a6a00815852d962ccd9bb806",
+    "references/capabilities/clarity-diagnosis.md": "d97fdfa7689cf20ab948efd47880aa44cf56e8d11230be9cc74387208f7606b3",
+    "references/capabilities/compositing-decision.md": "f6b8382ebd527f953c32e9125d777686c3b0ccac44aa564a8e7fafc3b1769171",
+    "references/capabilities/composition-guidance.md": "e7b57a7629a2fe8999a30c4164dbed40941d7dfbe18dac5e346667778fcc53fe",
+    "references/capabilities/depth-volume-texture.md": "7d5faf0fdf7e393b5ce2dd6c9b6c5a41962c8f8925263c45b85b9c80a0de77b9",
+    "references/capabilities/histogram-tonality.md": "8db327f9392a31d556c6cdb8a83ea38624e9a18f53d69b2f613ceab125ded9a0",
+    "references/capabilities/intent-diagnosis.md": "44b9bb1b7c7e7e97604588cbdede42fe6b2246263e8b25ce6efb98b7b8396975",
+    "references/capabilities/local-unity-variation.md": "8e5fd780142be451933b6c309325c31e79a17f12599f70227f93713f81eb6510",
+    "references/capabilities/natural-color-design.md": "3d3123453adc55a22cca8ae9c7b0632ebccfc6b4a15af3f1a854f3dd370d7d3b",
+    "references/capabilities/technical-finish.md": "35236717737efdacca458d380ee724e97503da2b1daf06cc5da14e8955a18f70",
+    "references/capability-index.md": "4daa9d67bb04b8b6a06318effc2ff831748ff324f5780c3ea8cc2fdd96489f82",
+    "references/cheatsheet.md": "bd0b0bcf87ea8c47ce4d6f01da0adaf84dee0fc27774f5c5890c096c05a047a5",
+    "references/glossary.md": "6aebf9c13b8382000b19e2a4b322b0f3533fdf75e11d899df6e8a308da0c96a0",
+    "references/overview.md": "a11662d21b95d8f5c45e4ffa2a364014e2021ccf7de88d41842cc02a4b7acfe1",
+    "resources/edit-brief-template.md": "22741bda3d69ad38bdd94b43c5f1253ce4a1c273353a5741ec3a4ddfbd5659f3"
+  },
+  "note": "update/重编译前比对 published_hashes；检测到本地手改不得静默覆盖",
+  "bundle_id": "bundle.landscape-photo-postprocessing",
+  "bundle_sha256": "22b582d56d99a51287e2ab33eaf191543c9a3ab36269519e974ebe18490073c7",
+  "variant": "single",
+  "run_id": "run-20260915-151415-f4a03a",
+  "decision": {
+    "schema_version": 1,
+    "requested": "single",
+    "selected": "single",
+    "decision_policy": "single-first-v1",
+    "skill_budget": 8,
+    "promoted_count": 0,
+    "capability_count": 10,
+    "reasons": [
+      "用户显式选择 single，auto 决策器不覆盖用户选择"
+    ],
+    "alternative": "compact pack（1 个来源路由入口 + 0 个晋级 Skill，共 1 个可发现入口）",
+    "user_confirmed": true,
+    "preserve_strategy_on_update": true
+  }
+}
