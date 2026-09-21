@@ -17,13 +17,16 @@ description: SanJin-设计专家。为数据中台、BI、运营后台和 AI 数
 | --- | --- |
 | 视觉硬规则 | `references/DESIGN.md` |
 | 视觉验收 | `references/visual-quality.md` |
+| **UI 判断规则（层级 / 布局 / 状态 / 动效）** | `references/ui-judgment.md` + `references/ui-judgment/` |
 | DESIGN.md 官方格式 | `knowledge/design-md/google-spec/docs/spec.md` |
 | 按需上下文路由 | `references/context-routing.md` |
 | 设计问题证据门禁 | `references/design-evidence-gate.md` |
 | DESIGN.md 沉淀流程 | `references/design-md-workflow.md` |
 | Ant Design X 伴生（AI 产品按需） | `companions/ant-design-x/` |
 | **VChart 伴生（页面图表）** | `companions/vchart/` |
+| **组件取证调用协议** | `references/mcp-evidence-protocol.md` |
 | 组件库 MCP 安装助手 | `companions/mcp-setup/` |
+| **原型脚手架模板（Semi）** | `scaffold/` |
 | 原型需求模板 / 交付门禁 | `references/brief-template.md`、`references/prototype-delivery.md` |
 | 截图还原规范 | `references/screenshot-to-prototype.md` |
 | 证据记录 / 自动校验 | `references/evidence-record.template.json`、`scripts/validate_prototype.py` |
@@ -37,12 +40,14 @@ description: SanJin-设计专家。为数据中台、BI、运营后台和 AI 数
 2. **实现技术栈须一次确认，未回复则默认 Semi Design。** 进入代码阶段前：若项目已有明确组件库，沿用它；否则询问一次。用户说“默认”、未回复或不关心时，使用 **Semi Design**（React）。本技能直接支持 `Semi Design`、`Ant Design`、`TDesign`；`Ant Design X` 仅用于 AI 对话/Agent。选定后只输出该栈的组件代码、import 与 props；**禁止混用多库 UI API**。允许的横切例外：
    - **AI 交互层**：可按伴生使用 Ant Design X，并须记录；
    - **页面图表**：统一使用内置 `companions/vchart/` 工作流，不得用选定栈自带 Chart 组件替代最终图表实现。
-3. **选定栈后必须先取组件证据，再写代码。** 未取得证据时不得编造 API。若对应 MCP 未配置或调用失败：先读 `companions/mcp-setup/SKILL.md`，协助用户安装后再取证。用户拒绝安装时，不能伪造组件代码；仅可交付低保真结构并明确风险。
-   - Semi（默认）：用 Semi MCP 先查组件文档，再按需查示例、组件文件和函数实现；代码只使用已验证的 import、props 与事件。
-   - Ant Design / TDesign：用对应 MCP 查询组件文档、DOM/示例和版本信息后再实现。
+3. **选定栈后必须先取组件证据，再写代码。** 未取得证据时不得编造 API。取证的**调用方式**按 `references/mcp-evidence-protocol.md`：先取组件清单，再带着待确认的 props 定向取；大文档被转存成文件时用 Grep 检索，不整篇读。若对应 MCP 未配置或调用失败：先读 `companions/mcp-setup/SKILL.md`，协助用户安装后再取证。用户拒绝安装时，不能伪造组件代码；仅可交付低保真结构并明确风险。
+   - Semi（默认）：清单 → 组件文档 → 按需单取代码块 → 仅在文档答不了时查文件与函数实现；代码只使用已验证的 import、props 与事件。
+   - Ant Design / TDesign：同样按清单 → 文档 → 示例推进；TDesign 的文档查询支持批量传组件名，合并成一次调用。
+   - 图标名与包导出路径不走 MCP，直接核对 `node_modules`（见协议文件末两节）。
    - **Ant Design X（AI 产品按需）**：设计 AI 对话、Agent、数据助理、流式回答时，读取 `companions/ant-design-x/SKILL.md` 与 `components.md`；若项目已安装 `@ant-design/x-skill` 则按任务调用其子技能。组件 API 以 [x.ant.design](https://x.ant.design/) 为准。
    - **VChart（图表必选）**：页面含可视化图表时读取 `companions/vchart/SKILL.md`，按任务核对官方 API；不得把内部数据或文件上传到外部服务。
-4. **视觉气质以 `references/DESIGN.md` 为硬规则。** 生成或改版任何 UI / HTML 前必须读取；交付前必须对照 `references/visual-quality.md` 验收。未通过视觉验收不得交付。视觉由 DESIGN.md 定貌；组件 API 跟所选实现库。Ant Design X 仅用于 AI 交互层，不得引入紫粉霓虹「赛博 AI」皮肤覆盖控制台规范。
+4. **视觉气质以 `references/DESIGN.md` 为硬规则。** 生成或改版任何 UI / HTML 前必须读取；交付前必须对照 `references/visual-quality.md` 验收。未通过视觉验收不得交付。视觉由 DESIGN.md 定貌；组件 API 跟所选实现库。Ant Design X 仅用于 AI 交互层，不得引入紫粉霓虹「赛博 AI」皮肤覆盖控制台规范。三者分工：**DESIGN.md 定取值**，**visual-quality.md 判合格**，**`references/ui-judgment.md` 给方法**；后者不产出取值，也不得放宽前两者的硬规则。
+4.5. **布局与状态按判断规则落地。** 页面结构、滚动归属、间距档位、状态范围和动效取舍，按需读取 `references/ui-judgment/` 下对应文件，不要凭手感决定。同一工作区同一方向只允许一个主滚动容器；状态只做用户明确要求的那些。
 5. **原型必须可验证。** 每个主任务至少可走通一条交互闭环；只实现用户明确要求的 loading、empty、error、no-permission 等状态，不主动增加状态切换器或演示入口。组件证据记录写入 `evidence.json`；交付前运行 `scripts/validate_prototype.py`。
 6. 数据、指标、AI 输出和权限相关内容不得只用颜色表达；必须包含文本、图标或结构化状态。高风险批量操作、权限变更、导出和自动执行必须展示影响范围并确认。
 7. **现有界面改进必须过证据门禁。** 读取 `references/design-evidence-gate.md`；只有同时证明设计契约、实际运行路径和唯一修正的候选，才能作为设计问题。用户只要求评审时保持只读；明确要求修改时才实施已证实的修正。
@@ -90,12 +95,19 @@ description: SanJin-设计专家。为数据中台、BI、运营后台和 AI 数
 ### 1. MCP 与组件证据
 
 - 用户要求安装 MCP、首次写工程、或 MCP 不可用时：读取并执行 `companions/mcp-setup/SKILL.md`。
+- 调用方式统一按 `references/mcp-evidence-protocol.md`：先把本页需要的组件列全并合并调用，先清单后文档，取文档前写下要确认的 props。
 - Semi 默认至少取证所需组件的文档 / 示例；Ant、TDesign 通过对应 MCP；AI 对话读取 Ant Design X 伴生。
 - 用 `references/evidence-record.template.json` 在原型工程根目录生成 `evidence.json`，记录所用组件、来源、版本和风险。
 
 ### 2. 设计与实现
 
 - **任何涉及界面外观、布局或 HTML/UI 输出**：先读 `references/DESIGN.md` 与 `references/visual-quality.md`。
+- **动手排版前按问题读判断规则**（`references/ui-judgment.md` 路由，单点问题只读一份）：
+  - 信息主次、分组、阅读顺序 → `references/ui-judgment/hierarchy.md`；
+  - 页面结构、滚动归属、间距档位、响应式重排、长内容 → `references/ui-judgment/layout.md`；
+  - 状态范围、空/错/权限写法、反馈载体选型 → `references/ui-judgment/states.md`；
+  - 是否需要动效、如何降级 → `references/ui-judgment/motion.md`。
+  完整页面通常按 `references/ui-judgment/hierarchy.md` → `references/ui-judgment/layout.md` 的顺序；状态和动效在需求已定义时再读。
 - 数据中台、BI、运营数据页：读取 `references/product-patterns.md` 与 `references/component-selection.md`。
 - 需要权限、审计、批量操作或大数据量表格：读取 `references/b2b-operational-patterns.md`。
 - AI 数据助理、智能问答、AI 生成报告：额外读取 `references/ai-trust-and-states.md`；**并按需读取** `companions/ant-design-x/SKILL.md` 与 `components.md`（对话/Agent UI 组件选型）。
@@ -151,8 +163,8 @@ python3 <SKILL_ROOT>/scripts/validate_prototype.py \
 ### A. Semi Design 实现分支（默认）
 
 1. 读取 `references/DESIGN.md`、`references/visual-quality.md`。
-2. 通过 Semi MCP 查询所需组件文档与示例；复杂组件再查文件列表、源码或函数实现。
-3. 默认交付 **Vite + React + `@douyinfe/semi-ui` 工程**（可双击打开的单文件 HTML 仅在用户明确要求时再做 UMD/CDN 方案）。
+2. 按 `references/mcp-evidence-protocol.md` 取证：先取组件清单核准名称，再定向取文档字段，示例按序号单取；复杂组件文档答不了时才查文件列表、源码或函数实现。
+3. 默认交付 **Vite + React + `@douyinfe/semi-ui` 工程**：复制 `scaffold/` 起工程，不要手写配置重踩环境坑；依赖优先装在原型目录的上一级由各原型共享（可双击打开的单文件 HTML 仅在用户明确要求时再做 UMD/CDN 方案）。
 4. 只使用已证实的 Semi 组件 API；优先直接 import 组件与图标，不复制组件内部实现。**若含图表**：读 `companions/vchart/`，用 `@visactor/react-vchart` 或 DOM 挂载。
 5. 在工程根目录生成 `evidence.json`；完成用户要求的交互闭环。
 6. 运行 build、`validate_prototype.py` 与视觉验收。
@@ -160,7 +172,7 @@ python3 <SKILL_ROOT>/scripts/validate_prototype.py \
 ### B. Ant Design / TDesign 实现分支（用户明确选择时）
 
 1. 读取 `references/DESIGN.md`、`references/visual-quality.md`。
-2. 用对应 MCP 取证后再写代码；只输出该库 API。**若含图表**：读 `companions/vchart/`，用 VChart，不用 antd/TDesign 图表组件做最终实现。
+2. 按 `references/mcp-evidence-protocol.md` 用对应 MCP 取证后再写代码；只输出该库 API。TDesign 的文档查询支持批量传组件名，合并成一次调用。**若含图表**：读 `companions/vchart/`，用 VChart，不用 antd/TDesign 图表组件做最终实现。
 3. 交付可运行工程、`evidence.json` 与交互闭环；完成构建和视觉验收。
 
 ### C. Ant Design X 实现分支（AI 产品按需 / 用户选择时）
@@ -197,10 +209,11 @@ python3 <SKILL_ROOT>/scripts/validate_prototype.py \
 
 - [ ] 已按 `context-routing.md` 选择当前阶段最小技能集，未同时加载超过 3 个技能。
 - [ ] 已读取并遵循 `references/DESIGN.md` 与 `references/visual-quality.md`。
+- [ ] 页面结构已按 `references/ui-judgment/` 判断：主次由任务决定、滚动归属唯一、间距按关系取档。
 - [ ] 实现栈已确认，或已声明采用默认 **Semi Design**。
 - [ ] 若输出组件代码：对应 MCP / 物料已取证，且工程根目录有 `evidence.json`。
 - [ ] 主任务可完成一条交互闭环；未主动增加用户未要求的状态演示。
-- [ ] 已运行构建 / 启动验证和 `scripts/validate_prototype.py`。
+- [ ] 已运行构建 / 启动验证和 `scripts/validate_prototype.py`；浏览器核查按 `references/prototype-delivery.md`「运行时验收方式」先测量后截图。
 - [ ] 首屏仅：标题 / 筛选 / ≤4 KPI / 主表或主图；仅 1 个 primary 实心按钮。
 - [ ] 无营销 Hero、渐变、玻璃拟态、chip 瀑布、紫粉 AI 装饰风。
 - [ ] 每条核心规范都有规则级别和适用场景。

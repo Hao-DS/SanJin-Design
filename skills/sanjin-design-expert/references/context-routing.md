@@ -33,10 +33,11 @@
 ## 任务路由
 
 - **新建/改造原型**：读取视觉硬规则、视觉验收、对应实现栈；有图再读 VChart，有 AI 对话再读 Ant Design X。
+- **布局或状态拿不准**：按 `ui-judgment.md` 的问题索引只读一份对应文件；不要整目录通读。它与技术栈无关，换栈不需重新判断。
 - **现有界面改进**：先读取 `design-evidence-gate.md`，追踪实际页面路径后再决定是否需要实现栈。
-- **体验评审**：读取 `design-evidence-gate.md`，结合 B 端、数据和 AI 规则完成只读审查。
+- **体验评审**：读取 `design-evidence-gate.md`，结合 B 端、数据和 AI 规则完成只读审查；对照基线用 `ui-judgment/` 的对应维度。
 - **设计规范/DESIGN.md**：读取 `design-md-workflow.md` 与本地 Google 格式规范。
-- **组件 API/MCP**：只加载目标组件库技能或 MCP 安装助手，不加载无关视觉案例。
+- **组件 API/MCP**：只加载目标组件库技能或 MCP 安装助手，不加载无关视觉案例。调用方式按 `mcp-evidence-protocol.md`：先清单后文档，定向取字段，大文档用 Grep 检索不整篇读。
 
 ## 冲突处理
 

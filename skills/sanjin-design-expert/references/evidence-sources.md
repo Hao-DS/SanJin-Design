@@ -10,6 +10,7 @@
 | --- | --- | --- |
 | P0 | 项目品牌规范、业务安全规则、**当前选定实现栈**的已验证物料 / MCP | 最终视觉、真实组件 API、权限与合规限制 |
 | P0.5 | 本技能 `references/DESIGN.md` + `visual-quality.md` | B 端数据台默认视觉气质、首屏预算、反模式（无项目品牌时生效） |
+| P0.8 | 本技能 `references/ui-judgment/` | 层级、布局与滚动、状态范围、动效取舍的**判断方法**；不产出取值，不覆盖 P0.5 硬规则 |
 | P1 | 无障碍与可信 AI 硬规则 | 对比度、键盘焦点、AI 透明度、人工确认与可恢复性 |
 | P2 | 非选定栈的 Ant / Semi / TDesign MCP 官方组件规范 | 企业级交互模式、Token 思路、组件使用场景（仅参考） |
 | P3 | 本技能 B 端、AI、图表与 DESIGN.md 参考 | 专项规则和格式；不得覆盖项目契约 |
@@ -18,21 +19,25 @@
 
 ## MCP 证据索引
 
+调用顺序、定向检索与每组件预算见 `references/mcp-evidence-protocol.md`；下表只说各来源管什么。
+
 | 来源 | 已验证内容 | 使用方式 | 限制 |
 | --- | --- | --- | --- |
-| Semi MCP | 组件 API、无障碍、中文文案、Table/Form 等场景 | 默认栈：先查文档和示例，复杂场景再查组件文件或函数实现 | 未取证不得臆造 API |
+| Semi MCP | 组件 API、无障碍、中文文案、Table/Form 等场景 | 默认栈：清单 → 文档 → 按需单取代码块 → 源码兜底 | 未取证不得臆造 API；图标名与包导出路径改查 `node_modules` |
 | Ant Design MCP | 企业级 Token、Table/Form 组件与交互能力 | 用户选定 Ant 时作实现证据；否则仅作模式参考 | 不得把 Ant API 写进 Semi/TDesign 代码 |
 | Ant Design X + `companions/ant-design-x/` | AI 对话组件（Bubble/Sender/Conversations/Prompts/Sources/ThoughtChain 等）、useXChat、XRequest、x-markdown | **AI 产品按需**取证；可选安装官方 `@ant-design/x-skill` | 仅用于 AI 交互层；视觉仍服从 DESIGN.md；未取证不得臆造 API |
-| TDesign MCP | Vue Next 的 Table、Form、Dialog、Drawer、Pagination、Select、DateRangePicker 等 | 用户选定 TDesign 时作实现证据；否则作 Vue 场景参考 | 不得跨库复制 API |
+| TDesign MCP | Vue Next 的 Table、Form、Dialog、Drawer、Pagination、Select、DateRangePicker 等 | 用户选定 TDesign 时作实现证据；文档查询支持批量传组件名，合并调用 | 不得跨库复制 API |
 
 ## 技能包内知识库
 
 | 路径 | 复用范围 | 使用限制 |
 | --- | --- | --- |
 | `knowledge/design-md/google-spec/docs/spec.md` | Google DESIGN.md 格式规范 | 仅在编写/校验设计文档时读取 |
+| `references/ui-judgment.md` + `ui-judgment/` | 信息层级、布局与滚动归属、状态设计、动效判断 | 按问题只读一份；与技术栈无关，取值仍查 `DESIGN.md` |
 | `references/context-routing.md` | 本地 UI 技能与参考的最小加载规则 | 每个 UI 任务先路由；同一阶段最多 3 个技能 |
 | `references/design-evidence-gate.md` | 现有界面改进与评审的证据要求 | 发现须同时具备契约、运行路径和唯一修正 |
 | `references/design-md-workflow.md` | DESIGN.md 的证据账本、纳入门禁与更新规则 | 仅沉淀可追溯的治理性决策 |
+| `references/mcp-evidence-protocol.md` | MCP 调用顺序、定向检索、每组件预算、不该走 MCP 的信息 | 写组件代码前必读；只约束取证方式，不放宽取证义务 |
 | `companions/mcp-setup/` | Semi / Ant Design / TDesign 的 Cursor MCP 安装与排障 | 缺 MCP 或用户要求安装时必读；合并写入 `.cursor/mcp.json` |
 | `references/evidence-record.template.json` | 原型组件取证记录格式 | 每个可运行原型工程复制为 `evidence.json`，记录栈、组件、来源、风险与验证命令 |
 | `scripts/validate_prototype.py` | 静态单栈、证据、状态与视觉风险检查 | 原型交付前执行；脚本告警须人工复核，错误必须修复 |
@@ -49,6 +54,7 @@
 | Google DESIGN.md 规范 | YAML token + 固定章节顺序 | `knowledge/design-md/google-spec/docs/spec.md` · https://github.com/google-labs-code/design.md |
 | Google DESIGN.md Spec | Overview → Colors → … → Do's and Don'ts | `knowledge/design-md/google-spec/docs/spec.md` |
 | UI Skills（MIT） | 最小 Skill 路由、设计发现证据门禁、DESIGN.md 证据管线 | 已本地化为 `context-routing.md`、`design-evidence-gate.md`、`design-md-workflow.md` · https://github.com/ibelick/ui-skills |
+| `@cloudai-design/oneskill`（MIT） | 层级、布局与滚动、状态、动效的判断方法与走查维度 | 已本地化为 `ui-judgment/` 与 `visual-quality.md` 第 10 节；已剥离其 Tailwind v3 + shadcn 类名、token 名与品牌色体系，取值改绑 `DESIGN.md`；其组件层、主题层、页面模板未纳入 · https://www.npmjs.com/package/@cloudai-design/oneskill |
 | Microsoft Power BI Dashboard Tips | 受众导向、单屏叙事、KPI 层级 | https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips |
 | Microsoft Human-Centered Design for Agents | AI 能力边界、修正与恢复 | https://learn.microsoft.com/en-us/agents/design-guidelines/human-centered-design |
 | Ant Design X Skills | AI 对话组件与 Agent 技能包 | `companions/ant-design-x/` · https://x.ant.design/x-skills/introduce-cn/ |
