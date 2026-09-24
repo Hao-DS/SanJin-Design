@@ -1,0 +1,190 @@
+/* 取值来自技能 references/DESIGN.md（B2B-Data-Console）。
+   只覆盖 Semi 与规范不一致的 token，不另造皮肤。 */
+
+:root {
+  --primary: #1677ff;
+  --ink: #1f1f1f;
+  --ink-secondary: #595959;
+  --ink-tertiary: #8c8c8c;
+  --canvas: #f5f5f5;
+  --surface: #ffffff;
+  --border: #f0f0f0;
+  --border-strong: #d9d9d9;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --side-width: 240px;
+}
+
+/* Semi 默认主色 rgb(0,100,250)、控件圆角 3px；规范是 #1677FF / 6px。 */
+body {
+  --semi-color-primary: rgba(22, 119, 255, 1);
+  --semi-color-primary-hover: rgba(64, 150, 255, 1);
+  --semi-color-primary-active: rgba(9, 88, 217, 1);
+  --semi-color-primary-light-default: rgba(230, 244, 255, 1);
+  --semi-color-link: rgba(22, 119, 255, 1);
+  --semi-color-focus-border: rgba(22, 119, 255, 1);
+  --semi-border-radius-small: 6px;
+  --semi-border-radius-medium: 6px;
+  --semi-border-radius-large: 8px;
+}
+
+.semi-tag {
+  border-radius: 4px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+/* 侧栏宽度必须与 Nav 同为 240。Layout.Sider 默认 200，窄于 Nav 会横向溢出。 */
+.shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--canvas);
+}
+
+.shell__side {
+  flex-shrink: 0;
+  width: var(--side-width);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.shell__side .semi-navigation {
+  width: 100%;
+}
+
+.brand {
+  flex-shrink: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+
+.shell__body {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+/* 标题 / 筛选 / KPI / 主表必须吃同一套页边距，左缘才能齐。不要给某一层再包 padding。 */
+.page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.page__meta {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--ink-tertiary);
+}
+
+.filter-bar,
+.kpi-row,
+.table-panel {
+  width: 100%;
+}
+
+.filter-bar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+}
+
+.kpi__label {
+  font-size: 14px;
+  color: var(--ink-secondary);
+}
+
+.kpi__value {
+  margin-top: 4px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  font-variant-numeric: tabular-nums;
+}
+
+.table-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  font-size: 13px;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.is-selected {
+  background: var(--semi-color-primary-light-default);
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+
+@media (max-width: 1279px) {
+  .kpi-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "sanjin-ui-agent-evidence/v1",
+  "project": "prototype-name",
+  "stack": {
+    "name": "semi",
+    "library": "@douyinfe/semi-ui",
+    "version": "2.x"
+  },
+  "retrievedAt": "YYYY-MM-DD",
+  "components": [
+    {
+      "pattern": "筛选表单",
+      "component": "Form / Select / DatePicker",
+      "source": "semi-mcp",
+      "evidence": "get_semi_document: Form, Select, DatePicker",
+      "risk": "真实筛选接口待接入"
+    },
+    {
+      "pattern": "高风险确认",
+      "component": "Modal",
+      "source": "semi-mcp",
+      "evidence": "get_semi_document: Modal",
+      "risk": "生产环境需接入权限与审计"
+    }
+  ],
+  "aiLayer": {
+    "enabled": false,
+    "source": ""
+  },
+  "validation": {
+    "build": "npm run build",
+    "prototypeCheck": "python3 <SKILL_ROOT>/scripts/validate_prototype.py --project . --stack semi --evidence evidence.json"
+  },
+  "knownLimitations": [
+    "使用本地 mock 数据",
+    "真实接口、鉴权和审计待接入"
+  ]
+}
